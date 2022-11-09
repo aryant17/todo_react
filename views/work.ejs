@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/css/styles.css">
+      <title>Document</title>
+</head>
+<body>
+      <div class="header">
+            <div class="one">
+                  <h2>TodoList</h2>
+            </div>
+            <div class="tw0">
+                  <a href="/">
+                        <h3 class="link">
+                              Home
+                        </h3>
+                  </a>
+            </div>
+      </div>
+
+
+      <div class="box" id="heading">
+            <h1 ><%= dayType %>  </h1>
+            <h1 style="margin-top: -20px;"> Work </h1>
+      </div>
+      
+  <div class="box">
+            <% for(var i = 0; i<workItems.length; i++){ %>
+                  <div class="item">
+                    <input type="checkbox">
+                    <p><%= workItems[i] %></p>
+                  </div>
+            <% } %>        
+      <form class="item" action="/work" method="post">
+            <input name="workinput" type="text" placeholder="Write new task">
+            <button type="submit">+</button>
+      </form>
+   </div> 
+
+   <footer>
+      COPYRIGHT@2022 Created by your Mother
+  </footer>
+</body>
+</html>
